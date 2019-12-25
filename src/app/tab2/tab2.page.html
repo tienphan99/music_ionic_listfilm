@@ -1,9 +1,18 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>
-      Tab Two
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
-
-<ion-content></ion-content>
+<ion-searchbar name="filter" id="filter" [(ngModel)]="searchText"></ion-searchbar>
+<ion-content>
+    <ion-list *ngFor="let sing of sings | filter:searchText">
+        <ion-item-group>
+            <ion-item-divider color="light">
+                <ion-label>{{sing.divider}}</ion-label>
+            </ion-item-divider>
+            <ion-item>
+                <ion-avatar>
+                    <img src="{{sing.image}}">
+                </ion-avatar>
+                <ion-label>
+                    {{sing.Singer}}
+                </ion-label>
+            </ion-item>
+        </ion-item-group>
+    </ion-list>
+</ion-content>

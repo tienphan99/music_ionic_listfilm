@@ -1,0 +1,36 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-button slot="start">
+      <ion-back-button defaultHref="/tab1"></ion-back-button>
+    </ion-button>
+    <ion-title text-center>
+      Tất cả bài hát
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content class="tutorial-page">
+  <ion-list>
+    <ion-slides pages>
+      <ion-slide>
+        <ion-item>
+          <ion-avatar>
+            <img src="{{loadedTab1.image}}">
+          </ion-avatar>
+          <ion-label>
+            <h3>{{loadedTab1.Name}}</h3>
+            <p>{{loadedTab1.Singer}}</p>
+          </ion-label>
+        </ion-item>
+      </ion-slide> 
+      <ion-slide>
+          <img src="{{loadedTab1.img}}" style="width: 60%;"/>
+          <h3><b>{{loadedTab1.Name}}</b></h3>
+          <b>{{loadedTab1.Singer}}</b>
+      </ion-slide> 
+      <ion-slide>
+        <h2 text-center>{{loadedTab1.content}}</h2>
+      </ion-slide>
+    </ion-slides>
+  </ion-list>
+
+</ion-content>

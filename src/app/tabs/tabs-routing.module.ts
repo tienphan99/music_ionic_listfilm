@@ -34,6 +34,10 @@ const routes: Routes = [
             path: '',
             loadChildren: () =>
               import('../tab3/tab3.module').then(m => m.Tab3PageModule)
+          },
+          {
+            path:'detail-tab3/:id',
+            loadChildren: () => import('../detail-tab3/detail-tab3.module').then( m => m.DetailTab3PageModule)
           }
         ]
       },
